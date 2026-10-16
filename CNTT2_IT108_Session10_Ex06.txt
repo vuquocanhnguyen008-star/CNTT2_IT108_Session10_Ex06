@@ -1,0 +1,25 @@
+##BÀI 6: SỰ CỐ TÀI LIỆU DỰ ÁN TRÊN GITHUB
+### 1. Phân tích sai lầm & Giải thích (Phần 1)
+1. **Hai sai lầm trong tư duy của Nam**:
+   * **Sai lầm 1**: Dùng định dạng **Rich Text (`.docx`)** để lưu trữ tài liệu mã nguồn, khiến GitHub không thể hiển thị nội dung trực tiếp trên giao diện trình duyệt web.
+   * **Sai lầm 2**: File `.docx` lưu dữ liệu dưới dạng nhị phân (Binary format). Chỉ cần thay đổi một dấu phẩy nhỏ, toàn bộ cấu trúc nhị phân bị đảo lộn, khiến hệ thống Git Diff không thể so sánh được dòng code nào thay đổi và dẫn đến lỗi xung đột (**Conflict**) toàn bộ file.
+
+2. **Tại sao Markdown an toàn và nhẹ hơn?**:
+   * **Bản chất Plain Text**: Markdown là dạng văn bản thô, kích thước file cực kỳ nhỏ gọn, tối ưu băng thông và dung lượng lưu trữ.
+   * **Chống hư hại file (Resilience)**: File Word chỉ cần lỗi mạng làm mất 1 byte dữ liệu ở header nhị phân là hỏng toàn bộ file không thể mở. Trong khi đó, file Markdown mất 1 byte chỉ mất đúng 1 ký tự đó, các nội dung còn lại vẫn đọc bình thường.
+   * **Tương thích hoàn hảo với Git Diff**: Hỗ trợ hiển thị rõ ràng, trực quan từng dòng thay đổi, thêm bớt trên GitHub.
+
+### 2. Hoàn thiện chuyển đổi sang Markdown `.md` (Phần 2)
+# Dự án GreenTech - Hệ thống Nông nghiệp Thông minh
+
+## 1. Giới thiệu
+GreenTech là giải pháp ứng dụng công nghệ IoT vào việc giám sát và tự động hóa quy trình chăm sóc cây trồng tại trang trại.
+
+## 2. Mục tiêu dự án
+* Tự động hóa quá trình tưới nước và bổ sung dinh dưỡng.
+* Tiết kiệm điện, nước và chi phí nhân công.
+* Theo dõi các chỉ số môi trường theo thời gian thực.
+
+## 3. Thành viên nhóm
+* **Nguyễn Văn A**: Trưởng nhóm / Phát triển phần mềm
+* **Nam (PTIT)**: Quản lý tài liệu kỹ thuật & Cấu hình hệ thống
